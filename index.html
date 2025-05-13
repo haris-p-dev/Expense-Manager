@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test v2.css" >
+    <link rel="stylesheet" href="themes v2.css" >
+    <title>Expense Manager</title>
+    
+</head>
+<body>
+
+<div class="neon-bg"></div>
+    
+<h1>Expense Manager</h1>
+
+<button id="change-theme">Change Theme</button>
+
+ <div id="theme-window">
+    <button class="theme-button" data-theme="theme-neon">Neon Circles</button>
+    <button class="theme-button" data-theme="theme-waves">Moving Waves</button>
+
+  
+</div>
+
+<main id="main-container">
+
+  <!-- First Row: Centered Summary Table -->
+  <div id="summary-container">
+    <table id="summary-table">
+      <tr class="table-headers">
+          <th>Total Income</th>
+          <th>Total Expenses</th>
+          <th>Sum</th>
+      </tr>
+      <tr>
+          <td id="total-income" ></td>
+          <td id="total-expenses"></td>
+          <td id="total-sum"></td>
+      </tr>
+  </table>
+  
+  </div>
+
+  <!-- Second Row: Expense Table & Form Side by Side -->
+  <div id="content-container">
+      <div id="expense-form">
+          <form id="expense-tracker">
+              <label for="expense-name">Expense Name</label>
+              <input id="expense-name" type="text" placeholder="Enter expense/income name" name="expenseName">
+
+              <label for="amount">Amount</label>
+              <input id="amount" type="text"  placeholder="01234567.89" oninput="validateNumber(this)" name="Amount" min="0" >
+
+              <div id="radio-button">
+                  <input type="radio" name="transaction-type" id="income" value="income">
+                  <label for="income">Income</label>
+
+                  <input type="radio" name="transaction-type" id="expense" value="expense">
+                  <label for="expense">Expense</label>
+              </div>
+
+                <button type="submit" id="sub-button">Add New</button>
+          </form>
+      </div>
+
+    <div id="expense-table">
+      <table>
+        <colgroup>
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+          <col style="width: 25%;">
+        </colgroup>
+        <thead>
+          <tr class="table-headers">
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+      <div id="scrollable-tbody">
+        <table>
+          <tbody>
+            <!-- Rows will be added dynamically here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+
+
+</body>
+<footer>
+    <script src="expense v2.js"></script>
+    <script src="themes v2.js"></script>
+</footer>
+</html>
