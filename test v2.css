@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Main Layout Container */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    gap: 20px;
+}
+
+
+#summary-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#summary-table {
+    width: 60%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(172, 170, 179, 0.641);
+}
+
+
+/* Align Expense Table & Form */
+#content-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#expense-table, #expense-form {
+    flex: 1;
+    background-color: rgba(172, 170, 179, 0.641);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #256cb8;
+    color: white;
+}
+
+.table-headers th:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.table-headers th:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+tr:hover {
+    background-color: rgba(172, 170, 179, 0.641);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Styling */
+#sub-button {
+    background-color: #23923d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#sub-button:hover {
+    background-color: #328d45;
+}
+
+/* Radio Button Styling */
+#radio-button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #expense-table, #expense-form, #summary-table {
+        width: 100%;
+    }
+}
+
+#expense-table td {
+    padding: 5px;
+    line-height: 1;
+}
+
+#expense-table {
+    display: flex;
+    flex-direction: column;
+    max-height: 240px; 
+    overflow: hidden;
+  }
+  
+  #scrollable-tbody {
+    overflow-y: auto;
+    max-height: 160px; /* allows ~6 rows; tweak as needed */
+  }
+  
+  #scrollable-tbody table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  #scrollable-tbody::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+#scrollable-tbody::-webkit-scrollbar-thumb {
+    background-color: #256cb8;
+    border-radius: 0; /* removes round corners */
+}
+
+#scrollable-tbody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+  

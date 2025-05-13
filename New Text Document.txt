@@ -1,0 +1,10 @@
+
+css : description of locations
+      different pics for mobile
+Txt download button
+
+alert message when no  name input. +  limit the number of digits acceptable. 
+
+transition effect on theme change
+
+Bug: after deletion of entries, the sum does NOT update
