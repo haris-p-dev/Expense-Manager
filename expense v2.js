@@ -20,8 +20,8 @@ function validateNumber(input) {
     }
     
     // Limit to 10 characters total
-    if (input.value.length > 10) {
-        input.value = input.value.substring(0, 10);
+    if (input.value.length > 9) {
+        input.value = input.value.substring(0, 9);
     }
     
     // Handle decimal places
@@ -43,10 +43,20 @@ typedName.addEventListener('input', () => {
 // Form submission
 function submitForm() {
     const transaction = document.querySelector('input[name="transaction-type"]:checked');
-    
-    if (typedName.value.trim() && transaction && typedAmount.value) {
+if (!typedAmount.value || !typedName.value.trim() || !transaction) {
+  if (!typedAmount.value) {
+    window.alert('Please enter amount');
+   
+  } else if (!typedName.value.trim()) {
+    window.alert('Please enter a valid Name');
+  } else if (!transaction) {
+    window.alert('Please select type of your input');
+  }
+  return; 
+  }
+    else if (typedName.value.trim() && transaction && typedAmount.value) {
         const tbody = document.querySelector("#expense-table tbody");
-       const amount = parseFloat(typedAmount.value) || 0;
+        const amount = parseFloat(typedAmount.value) || 0;
         
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
@@ -80,6 +90,7 @@ function submitForm() {
             totalIncomeSum += amount;
         } else {
             totalExpenseSum += amount;
+
         }
         
         updateSummaryDisplay();
@@ -91,13 +102,17 @@ function submitForm() {
             radio.checked = false;
         });
     }
+
 }
 
 // Update summary display
 function updateSummaryDisplay() {
+    let sum = document.getElementById("total-sum");
     document.getElementById("total-income").textContent = totalIncomeSum.toFixed(2);
     document.getElementById("total-expenses").textContent = totalExpenseSum.toFixed(2);
-    document.getElementById("total-sum").textContent = (totalIncomeSum - totalExpenseSum).toFixed(2);
+    sum.textContent = (totalIncomeSum - totalExpenseSum).toFixed(2);
+    sum.style.fontWeight = 650;
+
 }
 
 // Initialize summary display

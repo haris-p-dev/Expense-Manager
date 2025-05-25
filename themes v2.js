@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const theme = button.dataset.theme;
 
       // Remove previous theme classes
-      document.body.classList.remove('theme-neon', 'theme-waves');
+      document.body.classList.remove('night-mode', 'theme-waves');
 
       // Add new one
       if (theme) {

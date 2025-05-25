@@ -12,7 +12,7 @@
 
 <div class="neon-bg"></div>
     
-<h1>Expense Manager</h1>
+<header><h1>Expense Manager</h1></header>
 
 <button id="change-theme">Change Theme</button>
 
@@ -23,7 +23,8 @@
   
 </div>
 
-<main id="main-container">
+<main>
+  <section id="main-container">
 
   <!-- First Row: Centered Summary Table -->
   <div id="summary-container">
@@ -43,7 +44,7 @@
   </div>
 
   <!-- Second Row: Expense Table & Form Side by Side -->
-  <div id="content-container">
+  <section id="content-container">
       <div id="expense-form">
           <form id="expense-tracker">
               <label for="expense-name">Expense Name</label>
@@ -64,7 +65,7 @@
           </form>
       </div>
 
-    <div id="expense-table">
+     <div id="expense-table">
       <table>
         <colgroup>
           <col style="width: 25%;">
@@ -88,16 +89,18 @@
           </tbody>
         </table>
       </div>
-    </div>
-  </div>
+     </div>
 
+  </section>
 
 </main>
 
-
-</body>
 <footer>
+  <p>Expense Manager — A simple web app for tracking income and expenses. View the source on <a href="https://github.com/Haris-997/Expense-Manager" target="_blank">GitHub</a>.</p>
+</footer>
+
     <script src="expense v2.js"></script>
     <script src="themes v2.js"></script>
-</footer>
+</body>
+
 </html>
