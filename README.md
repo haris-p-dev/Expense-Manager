@@ -18,5 +18,4 @@ This is my **first project** that I built to learn and apply basic web developme
 - Vanilla JavaScript
 
 Check out the live version here:  
-      [https://haris-997.github.io/Expense-Manager/](https://haris-997.github.io/Expense-Manager/)
-
+      https://haris-p-dev.github.io/Expense-Manager
