@@ -15,7 +15,7 @@ This is my **first project** that I built to learn and apply basic web developme
 
 - HTML
 - CSS
-- JavaScript
+- Vanilla JavaScript
 
 Check out the live version here:  
       [https://haris-997.github.io/Expense-Manager/](https://haris-997.github.io/Expense-Manager/)
